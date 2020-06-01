@@ -2,10 +2,10 @@ import tweepy
 import time
 import os
 
-ckey=os.environ['2PASS']
-csecret=os.environ['2PASS_SCRT']
-atoken=os.environ['2TOK']
-asecret=os.environ['2TOK_SCRT']
+ckey=os.environ['ckey']
+csecret=os.environ['csecret']
+atoken=os.environ['atoken']
+asecret=os.environ['asecret']
 
 auth=tweepy.OAuthHandler(ckey, csecret)
 auth.set_access_token(atoken, asecret)
