@@ -52,7 +52,7 @@ api=tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 user=api.me()
 
 search='Line 2 Bloor-Danforth from:TTCnotices'
-nrTweets=5
+nrTweets=500
 
 for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
     try:
