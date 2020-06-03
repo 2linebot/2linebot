@@ -15,7 +15,7 @@ api=tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 user=api.me()
 
-search='Line 2 from:TTCnotices'
+search='"Line 2" from:TTCnotices'
 nrTweets=5
 
 for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
