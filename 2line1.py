@@ -8,6 +8,7 @@ sched=BlockingScheduler()
 
 @sched.scheduled_job('interval', minutes=2)
 def job():
+    print('This job runs every 2 minutes')
 
 ckey=environ['ckey']
 csecret=environ['csecret']
