@@ -31,7 +31,7 @@ def job():
            time.sleep(5)
         except tweepy.TweepError as e:
             print(e.reason)
-        except StopIteration
+        except StopIteration:
             break
 
 sched.start()
