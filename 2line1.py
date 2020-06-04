@@ -2,6 +2,12 @@ import tweepy
 import time
 import os
 from os import environ
+from apscheduler.schedulers.blocking import BlockingScheduler
+
+sched=BlockingScheduler()
+
+@sched.scheduled_job('interval', minutes=2)
+def job():
 
 ckey=environ['ckey']
 csecret=environ['csecret']
@@ -28,3 +34,5 @@ for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
         print(e.reason)
     except StopIteration:
         break
+
+sched.start()
