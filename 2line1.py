@@ -28,7 +28,7 @@ def job():
            print('Alert RTed')
            print(tweet.text)
            tweet.retweet()
-           time.sleep(10)
+           time.sleep(5)
         except tweepy.TweepError as e:
             print(e.reason)
         except StopIteration
