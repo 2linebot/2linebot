@@ -24,7 +24,6 @@ def job():
 
     for tweet in tweepy.Cursor(api.search, search).items(nrTweets):
         try:
-            print('Alert RTd')
             print(tweet.text)
             tweet.retweet()
             time.sleep(1)
@@ -32,5 +31,5 @@ def job():
             print(e.reason)
         except StopIteration:
             break
-sched.add_job(job, 'cron', hour='9-23,0-5', minute='*')
+sched.add_job(job, 'cron', minute='*')
 sched.start()
